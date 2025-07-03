@@ -1,6 +1,4 @@
-In vue we can create functions using the methods property. Methods is an object that contains the fucntion(s).
-In methods we can define one or more functions that we can use in the vue file.
+To listen to DOM events vue provides us with v-on directive.
 
-Never use arrow functions for methods. 
-
-To access a data property within a method (methods property) use "this" keyword. To pass the data property as an argument, we don't need "this" keyword. 
+The syntax is -> 
+v-on:name_of_the_event
