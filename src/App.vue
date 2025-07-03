@@ -1,15 +1,11 @@
 <template>
   <div>
     <ul>
-      <li v-for="(item, index) in names" :key="name">
-        {{ item }} has index {{ index }}
-      </li>
-    </ul>
-  </div>
-  <div>
-    <ul>
-      <li v-for="(items, index) in fullNames" :key="items.firstName">
-        {{ items.firstName }} {{ items.lastName }}
+      <li v-for="(items, index) in hobbies" :key="items.name">
+        <p>{{ items.name }}</p>
+        <ul>
+          <li v-for="item in items.hobby" :key="item">{{ item }}</li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -19,16 +15,15 @@
   export default {
     data(){
       return {
-        names: ["George", "Frank", "Steven"],
-        fullNames: [{
-          firstName: "Robert",
-          lastName: "Downey"
+        hobbies: [{
+          name: "Johnson",
+          hobby: ["Cooking", "Gardening"]
         }, {
-          firstName: "Seth",
-          lastName: "Rollins"
+          name: "Mitchell",
+          hobby: ["Baking", "Coding"]
         }, {
-          firstName: "Thompson",
-          lastName: "Alvarez"
+          name: "Santner",
+          hobby: ["Driving", "Playing"]
         }]
       }
     }
