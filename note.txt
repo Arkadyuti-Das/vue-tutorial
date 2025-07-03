@@ -1,0 +1,34 @@
+List rendering
+===============
+We can render list in vue, with the help of v-for directive.
+
+Elements in iteration are expected to have v-bind:key directive.
+The element in the v-for directive needs to have an attribute binding on the key attribute.
+
+Array of strings
+------------------
+export default {
+    data(){
+      return {
+        names: ["George", "Frank", "Steven"]
+      }
+    }
+  }
+
+loop as- 
+<li v-for="name in names">
+        {{ name }}
+      </li>
+where names is the array returned by data(), name is an item of names.
+Sometimes we want to get hold of index while rendering a list. For that vue provides index in v-for directive
+Array of objects
+------------------
+
+Array of array
+------------------
+
+Block of HTML elements
+----------------------
+
+Object key value pairs
+--------------------------
