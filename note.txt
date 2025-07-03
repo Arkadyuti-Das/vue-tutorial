@@ -65,9 +65,6 @@ loop as-
     </ul>
   </div>
 
-Block of HTML elements
-----------------------
-
 Object key value pairs
 --------------------------
 myInfo: {
@@ -85,3 +82,10 @@ loop keys and values as-
 Note-
 ======
 v-for works on <template></template> as well
+
+A note on key attribute
+========================
+A common practice is to provide a key attribute for the v-for directive. Key is a special attribue which is primarily used as a hint for vue's virtual DOM algorithm to identify the nodes when deffing (compare in order to determine how or whether they differ) e new DOM tree with the old DOM tree. 
+
+In simple words, the key attribute helps vue identify which items in a list has changed, are added or removed and plays a crucial role in handling UI updates correctly and efficiently.
+
