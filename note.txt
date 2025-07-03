@@ -89,3 +89,10 @@ A common practice is to provide a key attribute for the v-for directive. Key is 
 
 In simple words, the key attribute helps vue identify which items in a list has changed, are added or removed and plays a crucial role in handling UI updates correctly and efficiently.
 
+Conditional list rendering
+===========================
+v-for and v-if should never be used together as vue evaluates the v-if expression before the v-for expression. Instead use a template wrapper and then use v-if inside the rendered element.
+
+<template v-for="name in myInfo" :key="name">
+      <p v-if="name==='Apple'">{{ name }}</p>
+    </template>

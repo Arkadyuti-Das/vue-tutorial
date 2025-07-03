@@ -1,8 +1,7 @@
 <template>
   <div>
-    <template v-for="item in myInfo" :key="item">
-      <p>{{ item }}</p>
-    <hr>
+    <template v-for="name in myInfo" :key="name">
+      <p v-if="name!=='Apple'">{{ name }}</p>
     </template>
   </div>
 </template>
@@ -11,11 +10,7 @@
   export default {
     data(){
       return {
-        myInfo: {
-          name: "Arkadyuti",
-          userId: "cx299",
-          domain: "Full Stack"
-        }
+        myInfo: ["Apple", "Mango", "Pineapple"]
       }
     }
   }
