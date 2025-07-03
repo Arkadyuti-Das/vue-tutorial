@@ -21,8 +21,24 @@ loop as-
       </li>
 where names is the array returned by data(), name is an item of names.
 Sometimes we want to get hold of index while rendering a list. For that vue provides index in v-for directive
+
 Array of objects
 ------------------
+fullNames: [{
+          firstName: "Robert",
+          lastName: "Downey"
+        }, {
+          firstName: "Seth",
+          lastName: "Rollins"
+        }, {
+          firstName: "Thompson",
+          lastName: "Alvarez"
+        }]
+
+loop as-
+<li v-for="(items, index) in fullNames" :key="items.firstName">
+        {{ items.firstName }} {{ items.lastName }}
+      </li>
 
 Array of array
 ------------------

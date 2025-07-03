@@ -6,13 +6,30 @@
       </li>
     </ul>
   </div>
+  <div>
+    <ul>
+      <li v-for="(items, index) in fullNames" :key="items.firstName">
+        {{ items.firstName }} {{ items.lastName }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
   export default {
     data(){
       return {
-        names: ["George", "Frank", "Steven"]
+        names: ["George", "Frank", "Steven"],
+        fullNames: [{
+          firstName: "Robert",
+          lastName: "Downey"
+        }, {
+          firstName: "Seth",
+          lastName: "Rollins"
+        }, {
+          firstName: "Thompson",
+          lastName: "Alvarez"
+        }]
       }
     }
   }
