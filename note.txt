@@ -52,7 +52,7 @@ hobbies: [{
           name: "Santner",
           hobby: ["Driving", "Playing"]
         }]
-        
+
 loop as-
 <div>
     <ul>
@@ -70,3 +70,14 @@ Block of HTML elements
 
 Object key value pairs
 --------------------------
+myInfo: {
+          name: "Arkadyuti",
+          userId: "cx299",
+          domain: "Full Stack"
+        }
+        
+loop values as-
+<li v-for="items in myInfo">{{ items }}</li>
+
+loop keys and values as-
+<li v-for="(items, key) in myInfo">{{ key }}: {{ items }}</li>
