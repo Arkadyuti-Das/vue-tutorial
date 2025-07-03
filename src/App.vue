@@ -1,8 +1,9 @@
 <template>
   <div>
-    <ul>
-      <li v-for="(items, key) in myInfo">{{ key }}: {{ items }}</li>
-    </ul>
+    <template v-for="item in myInfo" :key="item">
+      <p>{{ item }}</p>
+    <hr>
+    </template>
   </div>
 </template>
 

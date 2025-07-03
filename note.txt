@@ -75,9 +75,13 @@ myInfo: {
           userId: "cx299",
           domain: "Full Stack"
         }
-        
+
 loop values as-
 <li v-for="items in myInfo">{{ items }}</li>
 
 loop keys and values as-
 <li v-for="(items, key) in myInfo">{{ key }}: {{ items }}</li>
+
+Note-
+======
+v-for works on <template></template> as well
