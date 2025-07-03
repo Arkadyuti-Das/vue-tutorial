@@ -1,8 +1,6 @@
 <template>
   <div>
-    <template v-for="name in myInfo" :key="name">
-      <p v-if="name!=='Apple'">{{ name }}</p>
-    </template>
+    <p>Result of addition: {{ add() }}</p>
   </div>
 </template>
 
@@ -10,7 +8,12 @@
   export default {
     data(){
       return {
-        myInfo: ["Apple", "Mango", "Pineapple"]
+    
+      }
+    },
+    methods: {
+      add(){
+        return 10+10;
       }
     }
   }
